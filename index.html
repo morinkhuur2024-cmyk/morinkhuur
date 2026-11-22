@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Морин хуурын тэнхим</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Морин хуур">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#261c14">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/jpeg" href="icon-192.jpg">
+<link rel="apple-touch-icon" href="icon-192.jpg">
+<style>
+  html,body{margin:0;height:100%;background:#261c14;overflow:hidden}
+  iframe{position:fixed;inset:0;width:100%;height:100%;border:0;
+    padding-top:env(safe-area-inset-top);box-sizing:border-box;background:#fff}
+  #load{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    color:#e9d8b4;font:16px -apple-system,system-ui,sans-serif;gap:14px;transition:opacity .4s}
+  #load img{width:132px;height:132px;border-radius:28px}
+</style>
+</head>
+<body>
+<div id="load"><img src="icon-192.jpg" alt=""><div>Морин хуурын тэнхим</div><div style="opacity:.7;font-size:13px">Ачаалж байна…</div></div>
+<iframe id="app" src="https://script.google.com/macros/s/AKfycbyfxDg6aS9H2Mv1Vk3yZgRWcuQuqt_ddtMskdvwFEIazH8o1vG9aQe5RA5hwJP3hhA2Rw/exec"
+  allow="clipboard-write" title="Морин хуурын тэнхим"></iframe>
+<script>
+  var f=document.getElementById('app'),l=document.getElementById('load');
+  f.style.opacity=0;
+  f.addEventListener('load',function(){f.style.opacity=1;l.style.opacity=0;setTimeout(function(){l.remove()},400)});
+  if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(function(){})}
+</script>
+</body>
+</html>

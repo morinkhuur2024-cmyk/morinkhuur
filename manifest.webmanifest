@@ -1,0 +1,23 @@
+{
+  "name": "Морин хуурын тэнхим",
+  "short_name": "Морин хуур",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#261c14",
+  "theme_color": "#261c14",
+  "lang": "mn",
+  "icons": [
+    {
+      "src": "icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "icon-192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "maskable"
+    }
+  ]
+}
